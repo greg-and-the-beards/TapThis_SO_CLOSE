@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<title>Tap This</title>
+	<!-- Bootstrap Core CSS -->
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<!-- Custom CSS -->
+	<link href="css/business-casual.css" rel="stylesheet">
+	<!-- Fonts -->
+	<link
+		href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+		rel="stylesheet" type="text/css">
+	<link
+		href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+		rel="stylesheet" type="text/css">
+		
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <!-- popover jquery -->
+    <script type="text/javascript">
+       $(document).ready(function(){
+       $('[data-toggle="popover"]').popover({
+       placement : 'top',
+       trigger : 'hover'
+       });
+       });
+	</script>
+</head>
+<body>
+	<!-- Navigation -->
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container-fluid">
+			<ul class="nav navbar-nav">
+				<li id="searchitem">
+					<form class="navbar-form" action="/searchResults" id="searchdiv"
+						role="search">
+						<div class="input-group">
+							<input type="text" class="form-control" placeholder="Search for beer!" 
+								name="beerInfo">
+							<div class="input-group-btn">
+								<button class="btn btn-search" type="submit">
+									<i class="glyphicon glyphicon-search"></i>
+								</button>
+							</div>
+						</div>
+					</form>
+				</li>
+				<li id="regButton">
+					<form class="navbar-form" action="/register">
+						<button type="submit" class="btn btn-primary">Register</button>
+					</form>
+				</li>
+				<li id="homeLogo"> <div id="logodiv"><a href="/"><img src="img/TapThisBanner.png" style="width: 400px; "></a></div></li>
+				<li id="rightSide">
+					<form class="navbar-form" action="/userlogin"
+							method="POST" id="loginform">
+						<input type="text" class="form-control" placeholder="Enter Username" name="userName"
+									required>
+						<input type="password" class="form-control" placeholder="Enter Password" name="password"
+									required>
+						<button id="login" class="btn btn-search" class="form-control"  type="button">Login</button>
+					</form>
+				</li>
+			</ul>
+		</div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12 text-center">
+					<div id="carousel-example-generic" class="carousel slide">
+						<!-- Indicators -->
+						<ol class="carousel-indicators hidden-xs">
+							<li data-target="#carousel-example-generic" data-slide-to="0"
+								class="active"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="1"></li>
+							<li data-target="#carousel-example-generic" data-slide-to="2"></li>
+						</ol>
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active">
+								<img class="img-responsive img-full"
+									src="img/beer_collection01.jpg" alt="">
+							</div>
+							<div class="item">
+								<img class="img-responsive img-full"
+									src="img/booze-map-hed-2013.jpg" alt="">
+							</div>
+							<div class="item">
+								<img class="img-responsive img-full"
+									src="img/beer_collection02.jpg" alt="">
+							</div>
+						</div>
+						<!-- Controls -->
+						<a class="left carousel-control" href="#carousel-example-generic"
+							data-slide="prev"> <span class="icon-prev"></span>
+						</a> <a class="right carousel-control"
+							href="#carousel-example-generic" data-slide="next"> <span
+							class="icon-next"></span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="box">
+				<div class="col-lg-12">
+					<hr>
+					<h2 class="intro-text text-center">
+						A Little About<strong> Tap This </strong>
+					</h2>
+					<hr>
+					<img class="img-responsive img-border img-left"
+						src="img/keepcalm.jpg" alt="">
+					<hr class="visible-xs">
+					<p>Born from the minds of four overstressed software
+						development students, Tap This was a final project that could
+						easily make the days seem to slip by just a little easier.
+						Actually, that second part of the previous sentence is a lie. It's
+						been a huge pain in the ass and keeps us all awake at night. We
+						are in constant fear. TAP THIS</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- /.container -->
+	<footer>
+        <!-- Team Section -->
+         <section id="team" class="bg-light-gray">
+               <div class="container">
+                   <div class="row">
+                       <div class="col-lg-12 text-center">
+                           <h3 class="section-subheading text-muted">Meet Greg and the Beards!</h3>
+                           <h4 class="section-subheading text-muted">Hover over for more details</h4>
+                       </div>
+                   </div>
+                   <div class="row">
+                       <div class="col-sm-3">
+                           <div class="team-member">
+                               <img src="img/greg.png" class="bs-example" data-toggle="popover" data-title="Backend-HTML" data-content="Focusing on both database creation and HTML design, Greg has kept the project on its toes with new techniques on a near daily basis all while mightily handling any bizarre glitch the HTML or CSS could throw at us." class="img-responsive img-circle">
+                               <h4>Greg Morris</h4>
+                           </div>
+                       </div>
+                       <div class="col-sm-3">
+                           <div class="team-member">
+                               <img src="img/jake.png"  class="bs-example" data-toggle="popover" data-title="API Annihilator-Backend-HTML" data-content="When Jake wasn't busy expertly wrestling the API into doing what we needed it to, he spent most of his time turning lead into gold with javascript. Jake also holds the current title for 'Guy That Broke Our API Key By Making Too Many Calls'." class="img-responsive img-circle">
+                               <h4>Jake Chmielewski</h4>
+                           </div>
+                       </div>
+                       <div class="col-sm-3">
+                           <div class="team-member">
+                               <img src="img/stuart.jpg"  class="bs-example" data-toggle="popover" data-title="JAVA/Middleware Sorcerer" data-content="A smooth JAVA operator through and through, Stuart handled the task of connecting Tap This's backend to it's frontend and tackled just about everything else in between. Oh, and he basically built all of the backend itself, minus the database tables." class="img-responsive img-circle">
+                               <h4>Stuart Filar</h4>
+                           </div>
+                       </div>
+                       <div class="col-sm-3">
+                           <div class="team-member">
+                               <img src="img/keith.png"  class="bs-example" data-toggle="popover" data-title="Frontend-Team Mascot" data-content="Really good at picking up pizza." class="img-responsive img-circle">
+                               <h4>Keith Gibson</h4>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+           </section>
+    </footer>
+
+	<!-- jQuery -->
+	<script src="js/jquery.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!-- Bootstrap Core JavaScript -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Script to Activate the Carousel -->
+	<script>
+		$('.carousel').carousel({
+			interval : 5000
+		//changes the speed
+		})
+
+		$.fn.serializeObject = function() {
+			var o = {};
+			var a = this.serializeArray();
+			$.each(a, function() {
+				if (o[this.name] !== undefined) {
+					if (!o[this.name].push) {
+						o[this.name] = [ o[this.name] ];
+					}
+					o[this.name].push(this.value || '');
+				} else {
+					o[this.name] = this.value || '';
+				}
+			});
+			return o;
+		};
+
+		$('#login').click(function() {
+			
+			var data = JSON.stringify($('#loginform').serializeObject());
+
+			$.ajax({
+				beforeSend : function(xhrObj) {
+					xhrObj.setRequestHeader(
+							"Content-Type",
+							"application/json");
+					xhrObj.setRequestHeader("Accept",
+							"application/json");
+				},
+				type : "POST",
+				contentType : "application/json",
+				url : "/userlogin",
+				data : data,
+				dataType : 'json',
+				success : function(json) {
+					//		sessionStorage.setItem('user', JSON.stringify(json));
+					//		var user = sessionStorage.getItem('user')
+					window.location = "/home";
+					//	console.log(data);
+				},
+				error : function(e, status) {
+					if (e.status == 500
+							|| e.status == 409) {
+						alert("Error! Username or password is invalid");
+						console.log(data);
+					}
+				}
+			})
+		});
+		
+	</script>
+
+</body>
+</html>
